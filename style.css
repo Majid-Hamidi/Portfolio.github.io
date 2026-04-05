@@ -286,8 +286,6 @@ a:hover {
 
  .hero h2 {
   font-size: clamp(1.2rem, 2.4vw, 1.8rem);
-  line-height: 1.15;
-  max-width: 12ch;
   margin-bottom: 1rem;
 }
 
