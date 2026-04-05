@@ -115,6 +115,7 @@ a:hover {
   max-width: 80ch;
   font-size: 1.05rem;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .hero-links {
