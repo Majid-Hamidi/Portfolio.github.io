@@ -4,650 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume | Majid Hamidi</title>
-  <meta
-    name="description"
-    content="Resume page of Majid Hamidi - PhD Civil Engineer, Structural Engineer, and Software Developer specializing in structural analysis, fire engineering, computational modeling, and engineering software."
-  />
+
+  <!-- SAME FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.65;
-      color: #1e293b;
-      background: #f8fafc;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      transition: 0.25s ease;
-    }
-
-    a:hover {
-      color: #1d4ed8;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    h1, h2, h3, h4, .logo {
-      margin-top: 0;
-      line-height: 1.2;
-      color: #0f172a;
-    }
-
-    p {
-      margin-top: 0;
-      color: #475569;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 1.2rem;
-      color: #475569;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      color: white;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .nav nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-    }
-
-    .nav nav a {
-      color: rgba(255, 255, 255, 0.92);
-      font-weight: 500;
-    }
-
-    .nav nav a:hover {
-      color: white;
-    }
-
-    .hero {
-      padding: 3.2rem 0 2rem;
-      background: linear-gradient(to bottom, #ffffff, #f8fafc);
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .eyebrow {
-      margin-bottom: 0.8rem;
-      color: #2563eb;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 0.8rem;
-      max-width: 12ch;
-    }
-
-    .hero-subtitle {
-      font-size: 1.05rem;
-      max-width: 78ch;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1.8rem;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.55rem 0.9rem;
-      border-radius: 999px;
-      background: #eff6ff;
-      color: #1d4ed8;
-      font-weight: 600;
-      font-size: 0.92rem;
-      border: 1px solid #dbeafe;
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.15rem;
-      border-radius: 10px;
-      border: 1px solid #cbd5e1;
-      background: white;
-      color: #0f172a;
-      font-weight: 600;
-      transition: 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-    }
-
-    .btn.primary {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: white;
-    }
-
-    .btn.primary:hover {
-      background: #1d4ed8;
-      border-color: #1d4ed8;
-      color: white;
-    }
-
-    .section {
-      padding: 3rem 0;
-    }
-
-    .section-title {
-      font-size: 1.55rem;
-      margin-bottom: 1.2rem;
-      font-weight: 700;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-      padding: 1.5rem;
-    }
-
-    .summary {
-      font-size: 1.02rem;
-      margin-bottom: 0;
-    }
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .highlight-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 1rem;
-    }
-
-    .highlight-box h3 {
-      font-size: 1rem;
-      margin-bottom: 0.55rem;
-    }
-
-    .highlight-box p {
-      margin-bottom: 0;
-      font-size: 0.96rem;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .timeline-item {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 1.4rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-    }
-
-    .item-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.4rem;
-    }
-
-    .item-title {
-      font-size: 1.05rem;
-      margin: 0;
-    }
-
-    .item-company {
-      color: #2563eb;
-      font-weight: 600;
-      margin-bottom: 0.7rem;
-    }
-
-    .item-date {
-      color: #64748b;
-      font-size: 0.95rem;
-      white-space: nowrap;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .skills-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 1.3rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-    }
-
-    .skills-card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tag {
-      background: #f8fafc;
-      border: 1px solid #dbe3ec;
-      padding: 0.5rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      color: #334155;
-    }
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .edu-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 1.3rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-    }
-
-    .edu-card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .edu-card p {
-      margin-bottom: 0.35rem;
-    }
-
-    .downloads {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .download-card {
-      background: linear-gradient(to bottom right, #ffffff, #f8fbff);
-      border: 1px solid #dbeafe;
-      border-radius: 18px;
-      padding: 1.4rem;
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
-    }
-
-    .download-card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.05rem;
-    }
-
-    .download-card p {
-      margin-bottom: 1rem;
-    }
-
-    .footer {
-      background: #0f172a;
-      color: rgba(255, 255, 255, 0.9);
-      padding: 1.4rem 0;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .footer p {
-      margin: 0;
-      color: inherit;
-    }
-
-    @media (max-width: 900px) {
-      .grid-2,
-      .skills-grid,
-      .education-grid,
-      .downloads {
-        grid-template-columns: 1fr;
-      }
-
-      .highlight-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero {
-        padding-top: 2.4rem;
-      }
-
-      .hero h1 {
-        max-width: 100%;
-      }
-
-      .section {
-        padding: 2.5rem 0;
-      }
-    }
-  </style>
+  <!-- SAME CSS -->
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <div class="logo">Majid Hamidi</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#summary">Summary</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#downloads">Downloads</a>
-      </nav>
+
+<header class="site-header">
+  <div class="container nav">
+    <div class="logo">Majid Hamidi</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Resume</p>
+    <h2>Professional Profile</h2>
+
+    <p class="intro">
+      PhD Civil Engineer combining structural engineering, computational modeling, and software development.
+      Experienced in structural analysis, fire engineering, BIM automation, and development of engineering software using C#, .NET, and Revit/ETABS APIs.
+    </p>
+
+    <div class="hero-links">
+      <a class="btn primary" href="assets/cv.pdf" target="_blank">Structural Resume</a>
+      <a class="btn" href="assets/cv-programming.pdf" target="_blank">Software Resume</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section class="hero">
-    <div class="container">
-      <p class="eyebrow">Resume / Professional Profile</p>
-      <h1>Majid Hamidi</h1>
-      <p class="hero-subtitle">
-        PhD in Civil Engineering from Carleton University, combining structural engineering, computational modeling,
-        and software development to build practical tools for analysis, automation, simulation, and BIM-integrated workflows.
-      </p>
+<!-- SUMMARY -->
+<section id="summary" class="section">
+  <div class="container">
+    <h2>Summary</h2>
+    <p>
+      Structural engineer with strong expertise in steel and concrete design, finite element modeling,
+      and structural fire analysis. Experienced in developing engineering software tools, automating
+      workflows, and integrating BIM systems. Combines analytical engineering knowledge with practical
+      software development to improve efficiency and decision-making in engineering projects.
+    </p>
+  </div>
+</section>
 
-      <div class="hero-meta">
-        <span class="pill">Structural Engineer</span>
-        <span class="pill">Software Developer</span>
-        <span class="pill">PhD, Civil Engineering</span>
-        <span class="pill">C# / .NET / WPF</span>
-        <span class="pill">ETABS / SAP / Revit</span>
+<!-- EXPERIENCE -->
+<section id="experience" class="section alt">
+  <div class="container">
+    <h2>Experience</h2>
+
+    <div class="projects-grid">
+
+      <article class="card">
+        <h3>Research Associate – Carleton University</h3>
+        <p>
+          Developed advanced finite element models for structural behavior under thermal and mechanical loading.
+          Conducted research on structural fire performance and hybrid testing methods.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Researcher – NRC Canada</h3>
+        <p>
+          Performed nonlinear structural fire simulations and contributed to full-scale fire testing programs.
+          Developed analytical tools and validated computational models using experimental data.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Structural Designer & Software Developer</h3>
+        <p>
+          Designed steel and concrete structures and developed ETABS and Revit automation tools.
+          Reduced modeling time by over 80% through BIM integration workflows.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skills-groups">
+
+      <div class="skills-group">
+        <h3>Programming</h3>
+        <div class="skills-list">
+          <span>C#</span>
+          <span>.NET</span>
+          <span>C++</span>
+          <span>WPF</span>
+        </div>
       </div>
 
-      <div class="hero-links">
-        <a class="btn primary" href="#downloads">Download Resumes</a>
-        <a class="btn" href="mailto:majid.h88@gmail.com">majid.h88@gmail.com</a>
-        <a class="btn" href="https://www.linkedin.com/in/majid-hamidi-iravani/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/majid-hamidi" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="summary" class="section">
-    <div class="container">
-      <h2 class="section-title">Professional Summary</h2>
-      <div class="grid-2">
-        <div class="card">
-          <p class="summary">
-            I am a Civil/Structural Engineer with a PhD and a strong background in structural analysis, fire engineering,
-            finite element modeling, and engineering software development. My work spans steel and reinforced concrete design,
-            advanced simulation under thermal and mechanical loading, technical reporting, BIM integration, and desktop application
-            development. I bring a rare combination of analytical engineering depth and practical software capability, with experience
-            building C#/.NET tools, Revit and ETABS plugins, and simulation workflows that improve efficiency and decision-making.
-          </p>
-        </div>
-
-        <div class="highlight-grid">
-          <div class="highlight-box">
-            <h3>Structural Engineering</h3>
-            <p>Steel and concrete design, code-based verification, finite element analysis, technical reporting, and structural performance assessment.</p>
-          </div>
-          <div class="highlight-box">
-            <h3>Software Development</h3>
-            <p>C#/.NET, WPF, engineering desktop applications, BIM automation, and API-based workflows using Revit and ETABS.</p>
-          </div>
-          <div class="highlight-box">
-            <h3>Research & Simulation</h3>
-            <p>Nonlinear modeling, structural fire analysis, experimental validation, and hybrid research-to-practice engineering workflows.</p>
-          </div>
-          <div class="highlight-box">
-            <h3>Professional Direction</h3>
-            <p>Strong fit for structural engineering, engineering software, computational design, simulation, and BIM-integrated technical roles.</p>
-          </div>
+      <div class="skills-group">
+        <h3>Engineering</h3>
+        <div class="skills-list">
+          <span>Structural Analysis</span>
+          <span>Fire Engineering</span>
+          <span>FEM</span>
+          <span>Concrete & Steel Design</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="timeline">
-        <article class="timeline-item">
-          <div class="item-top">
-            <h3 class="item-title">Research Associate</h3>
-            <div class="item-date">Dec 2025 – Present</div>
-          </div>
-          <div class="item-company">Carleton University · Ottawa, Canada</div>
-          <ul>
-            <li>Developed and implemented advanced finite element models to simulate structural behavior under combined thermal and mechanical loading.</li>
-            <li>Conducted research on hybrid fire testing methods for high-rise structures under fire conditions.</li>
-            <li>Supported computational workflows bridging structural analysis, model validation, and practical engineering interpretation.</li>
-          </ul>
-        </article>
-
-        <article class="timeline-item">
-          <div class="item-top">
-            <h3 class="item-title">Researcher – Structural / Fire Engineering</h3>
-            <div class="item-date">Sep 2021 – Sep 2025</div>
-          </div>
-          <div class="item-company">National Research Council Canada · Ottawa, Canada</div>
-          <ul>
-            <li>Performed structural analysis of concrete and steel members under extreme loading scenarios including fire, nonlinear response, and material degradation.</li>
-            <li>Contributed to four full-scale structural fire testing programs involving instrumentation, data collection, interpretation, and analytical model validation.</li>
-            <li>Conducted nonlinear structural fire simulations using temperature-dependent material behavior and performance-based assessment methods.</li>
-            <li>Developed internal analytical and software tools to improve structural simulation workflows and model preparation efficiency.</li>
-            <li>Prepared technical documentation and reports for external stakeholders, including industry and government collaborators.</li>
-          </ul>
-        </article>
-
-        <article class="timeline-item">
-          <div class="item-top">
-            <h3 class="item-title">Structural Designer and Software Developer</h3>
-            <div class="item-date">Sep 2016 – Aug 2021</div>
-          </div>
-          <div class="item-company">BastanPol Group Company · Tehran, Iran</div>
-          <ul>
-            <li>Performed structural analysis and design of steel and reinforced concrete buildings in accordance with applicable codes and standards.</li>
-            <li>Contributed to commercial and high-rise building projects, supporting structural analysis, modeling, and coordinated delivery.</li>
-            <li>Developed C#/.NET automation plugins for ETABS that reduced repetitive design work by more than 50% and improved code-based verification consistency.</li>
-            <li>Designed and implemented a BIM integration tool using the Revit API to transfer structural models from ETABS to Revit, reducing manual modeling time by more than 80% per project.</li>
-            <li>Built structured desktop applications using WPF and database-backed workflows to support reporting, modeling, and engineering productivity.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Skills & Technical Strengths</h2>
-
-      <div class="skills-grid">
-        <div class="skills-card">
-          <h3>Programming & Development</h3>
-          <div class="tags">
-            <span class="tag">C#</span>
-            <span class="tag">.NET</span>
-            <span class="tag">C++</span>
-            <span class="tag">Python</span>
-            <span class="tag">WPF</span>
-            <span class="tag">Windows Forms</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">Entity Framework</span>
-            <span class="tag">Object-Oriented Design</span>
-          </div>
-        </div>
-
-        <div class="skills-card">
-          <h3>Engineering & Analysis</h3>
-          <div class="tags">
-            <span class="tag">Structural Analysis</span>
-            <span class="tag">Finite Element Modeling</span>
-            <span class="tag">Steel Design</span>
-            <span class="tag">Concrete Design</span>
-            <span class="tag">Structural Fire Engineering</span>
-            <span class="tag">Technical Reports</span>
-            <span class="tag">Code-Based Verification</span>
-            <span class="tag">Experimental Validation</span>
-          </div>
-        </div>
-
-        <div class="skills-card">
-          <h3>Software & Platforms</h3>
-          <div class="tags">
-            <span class="tag">ETABS</span>
-            <span class="tag">SAP</span>
-            <span class="tag">Revit</span>
-            <span class="tag">Revit API</span>
-            <span class="tag">ETABS API</span>
-            <span class="tag">OpenSees</span>
-            <span class="tag">BIM Automation</span>
-            <span class="tag">Simulation Workflows</span>
-          </div>
+      <div class="skills-group">
+        <h3>Tools</h3>
+        <div class="skills-list">
+          <span>ETABS</span>
+          <span>SAP</span>
+          <span>Revit</span>
+          <span>OpenSees</span>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">Education & Recognition</h2>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Majid Hamidi</p>
+  </div>
+</footer>
 
-      <div class="education-grid">
-        <div class="edu-card">
-          <h3>PhD, Fire Engineering</h3>
-          <p><strong>Carleton University</strong> · Ottawa, Ontario</p>
-          <p>Research focused on structural behavior and performance under fire conditions, including analytical modeling and experimental validation.</p>
-        </div>
-
-        <div class="edu-card">
-          <h3>MSc, Earthquake Engineering</h3>
-          <p><strong>Amirkabir University of Technology</strong> · Tehran, Iran</p>
-          <p>Advanced graduate study in structural and earthquake engineering.</p>
-        </div>
-
-        <div class="edu-card">
-          <h3>BSc, Civil Engineering</h3>
-          <p><strong>K.N. Toosi University of Technology</strong> · Tehran, Iran</p>
-          <p>Foundational study in civil and structural engineering.</p>
-        </div>
-
-        <div class="edu-card">
-          <h3>Honors & Licensure</h3>
-          <p>First Place – Poster Competition, 2023 International Canadian Nuclear Society Conference on Fire Safety and Emergency Preparedness.</p>
-          <p>P.Eng. application in progress with Engineers and Geoscientists BC (EGBC).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="downloads" class="section">
-    <div class="container">
-      <h2 class="section-title">Resume Downloads</h2>
-
-      <div class="downloads">
-        <article class="download-card">
-          <h3>Structural Engineering Resume</h3>
-          <p>
-            Best for structural engineering, design, EIT, analysis, fire engineering, consulting, and infrastructure-focused applications.
-          </p>
-          <div class="hero-links">
-            <a class="btn primary" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
-            <a class="btn" href="assets/cv.pdf" download>Download PDF</a>
-          </div>
-        </article>
-
-        <article class="download-card">
-          <h3>Software / Programming Resume</h3>
-          <p>
-            Best for C#/.NET, WPF, BIM software, Revit API, ETABS API, engineering software, and automation-focused roles.
-          </p>
-          <div class="hero-links">
-            <a class="btn primary" href="assets/cv-programming.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
-            <a class="btn" href="assets/cv-programming.pdf" download>Download PDF</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Majid Hamidi</p>
-    </div>
-  </footer>
 </body>
 </html>
