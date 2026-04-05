@@ -176,10 +176,10 @@ a:hover {
 }
 
 .section h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.0rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   margin-bottom: 1rem;
   
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 .alt {
