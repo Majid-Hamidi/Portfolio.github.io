@@ -66,15 +66,8 @@ p {
   max-width: 60ch;
 }
 
-.hero-card {
-  display: flex;
-  justify-content: center;
-}
-
 .hero-card img {
   width: 100%;
-  max-width: 180px;
-  height: auto;
   border-radius: 12px;
 }
 
