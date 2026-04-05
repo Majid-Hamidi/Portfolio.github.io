@@ -208,6 +208,7 @@ a:hover {
 
 .card p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .card-links {
