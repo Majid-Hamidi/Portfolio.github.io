@@ -217,6 +217,15 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.card img {
+  width: 100%;
+  height: 180px;        /* fixed height */
+  object-fit: contain;  /* keeps full image without cropping */
+  background: #f8fafc;  /* optional: clean background */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
 .card-links a {
   font-weight: 600;
 }
