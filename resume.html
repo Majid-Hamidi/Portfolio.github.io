@@ -354,11 +354,27 @@
 }
 
 .edu-card img {
-  width: 42px;
-  height: 42px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
   display: block;
   margin: 1.2rem auto;
+}
+    .edu-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.edu-row img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.edu-row p {
+  margin: 0;
 }
     .downloads {
       display: grid;
@@ -557,7 +573,52 @@
     </div>
   </section>
 
-  <section id="skills" class="section">
+ 
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">Education & Recognition</h2>
+
+      <div class="education-grid">
+        <div class="edu-card">
+          <h3>PhD, Fire Engineering</h3>
+          <div class="edu-row">
+            <img src="assets/carleton.png" alt="Carleton University logo">
+            <p><strong>Carleton University</strong> · Ottawa, Ontario</p>
+          </div>
+          <p>
+            Research focused on structural behaviour and performance under fire conditions.
+          </p>
+        </div>
+
+        <div class="edu-card">
+          <h3>MSc, Earthquake Engineering</h3>
+          <div class="edu-row">
+            <img src="assets/Amirkabir.png" alt="Amirkabir University logo">
+            <p><strong>Amirkabir University of Technology</strong> · Tehran, Iran</p>
+          </div>
+          <p>Advanced graduate study in structural and earthquake engineering.</p>
+        </div>
+
+        <div class="edu-card">
+          <h3>BSc, Civil Engineering</h3>
+          <div class="edu-row">
+            <img src="assets/KNTOOSI.png" alt="Amirkabir University logo">
+            <p><strong>K.N. Toosi University of Technology</strong> · Tehran, Iran</p>
+          </div>
+          <p>Foundational study in civil and structural engineering.</p>
+        </div>
+
+        <div class="">
+          <h3>Honors & Licensure</h3>
+          <p>First Place – Poster Competition, 2023 International Canadian Nuclear Society Conference on Fire Safety and Emergency Preparedness.</p>
+          <p>P.Eng. application in progress with Engineers and Geoscientists BC (EGBC).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Skills & Technical Strengths</h2>
 
@@ -607,42 +668,6 @@
       </div>
     </div>
   </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title">Education & Recognition</h2>
-
-      <div class="education-grid">
-        <div class="edu-card">
-          <h3>PhD, Fire Engineering</h3>
-          <p><strong>Carleton University</strong> · Ottawa, Ontario</p>
-          <img src="assets/carleton.png" alt="Carleton University logo">
-          <p>Research focused on structural behavior and performance under fire conditions, including analytical modeling and experimental validation.</p>
-        </div>
-
-        <div class="edu-card">
-          <h3>MSc, Earthquake Engineering</h3>
-          <p><strong>Amirkabir University of Technology</strong> · Tehran, Iran</p>
-          <img src="assets/Amirkabir.png" alt="Carleton University logo">
-          <p>Advanced graduate study in structural and earthquake engineering.</p>
-        </div>
-
-        <div class="edu-card">
-          <h3>BSc, Civil Engineering</h3>
-          <p><strong>K.N. Toosi University of Technology</strong> · Tehran, Iran</p>
-          <img src="assets/KNTOOSI.png" alt="Carleton University logo">
-          <p>Foundational study in civil and structural engineering.</p>
-        </div>
-
-        <div class="">
-          <h3>Honors & Licensure</h3>
-          <p>First Place – Poster Competition, 2023 International Canadian Nuclear Society Conference on Fire Safety and Emergency Preparedness.</p>
-          <p>P.Eng. application in progress with Engineers and Geoscientists BC (EGBC).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="downloads" class="section">
     <div class="container">
       <h2 class="section-title">Resume Downloads</h2>
